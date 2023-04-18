@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <style>
+    .pic{
+      width: 40px;
+    }
+    li{
+      overflow: hidden;
+     
+    }
+    body{
+      background-color: #000;
+    }
+    .blog{
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      top: calc(100% + 30px);
+      transition: all .3s;
+      transition-delay: .1s;
+      border-radius: 0px 0px 5px 5px;
+ 
+    }
+    li:hover .blog{
+      visibility: visible;
+      opacity: 1;
+      top: 80%;
+    }
+    nav{
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="./img/icon_logo.png" alt="" class="pic">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">Blog</a>
+          <div class="blog shadow p-1 bg-dark">
+            <a class="nav-link" href="#">Action</a>
+            <a class="nav-link" href="#">Another action</a>
+            <a class="nav-link" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+      <form method="POST" class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+  
+
+
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
